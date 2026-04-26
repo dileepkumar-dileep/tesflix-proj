@@ -1,0 +1,83 @@
+.hero {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05); /* Slight scale to hide edges during micro-animations */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(20,20,20,0.9) 0%, rgba(20,20,20,0.3) 50%, rgba(20,20,20,0) 100%),
+              linear-gradient(to top, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 20%);
+}
+
+.content {
+  padding: 0 4%;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  max-width: 60%;
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 50%;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  color: #e5e5e5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.playBtn {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.playBtn:hover {
+  background-color: rgba(255,255,255,0.7);
+  transform: scale(1.05);
+}
+
+.playIcon {
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
